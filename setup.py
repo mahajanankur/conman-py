@@ -6,7 +6,7 @@ requires = []
 
 setup(
     include_package_data=True,
-    name="conman",
+    name="pyconman",
     version='0.0.1',
     description='Package for managing and profiling JSON configurations in Python-based libraries and web applications.',
     long_description_content_type='text/markdown',
