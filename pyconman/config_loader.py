@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 dir_path = os.path.join(os.getcwd(), "configs")
 
-from utils.json_util import JsonUtils
+# from utils.json_util import JsonUtils
 
 load_dotenv()  # load environment variables from .env file
 
@@ -32,7 +32,7 @@ class ConfigLoader:
                 with open(f'{dir_path}/{environment}.json', 'r') as f:
                     env_config = json.load(f)
                 # Merge the default and dynamic properties.
-                merged_configs = JsonUtils.merge_json(default_configs, env_config)
+                merged_configs = ConfigLoader.__merge_json(default_configs, env_config)
             else:
                 merged_configs = default_configs
             
@@ -46,3 +46,17 @@ class ConfigLoader:
         if ConfigLoader._config is None:
             ConfigLoader._config = ConfigLoader.load_config(env=env)
         return ConfigLoader._config
+    
+    @staticmethod
+    def __merge_json(json1, json2):
+        # Recursively merges two JSON objects
+        if isinstance(json1, dict) and isinstance(json2, dict):
+            merged = json1.copy()
+            for key, value in json2.items():
+                if key in merged:
+                    merged[key] = ConfigLoader.__merge_json(merged[key], value)
+                else:
+                    merged[key] = value
+            return merged
+        else:
+            return json2
