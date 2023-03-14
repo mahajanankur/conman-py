@@ -1,8 +1,8 @@
 import os, json
 from dotenv import load_dotenv
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-print(f"directory path in the beginning = {dir_path}")
+dir_path = os.path.join(os.getcwd(), "configs")
+
 from utils.json_util import JsonUtils
 
 load_dotenv()  # load environment variables from .env file
