@@ -1,1 +1,1 @@
-pyconman==1.0.0
+pyconman==1.0.1
