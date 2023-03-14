@@ -9,7 +9,7 @@ requires = [
 setup(
     include_package_data=True,
     name="pyconman",
-    version='0.0.5',
+    version='1.0.0',
     description='Package for managing and profiling JSON configurations in Python-based libraries and web applications.',
     long_description_content_type='text/markdown',
     long_description=open('README.md').read(),

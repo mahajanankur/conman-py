@@ -14,12 +14,12 @@ class ConfigLoader:
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super().__new__(cls)
-            cls._config = cls.load_config()
+            cls._config = cls.__load_config()
         return cls._instance
 
     @staticmethod
-    def load_config(env = "local"):
-        print(f"directory path in load_config = {dir_path}")
+    def __load_config(env = "local"):
+        # print(f"directory path in load_config = {dir_path}")
         try:
             # Determine the environment
             environment = os.environ.get('ENV', env)
@@ -44,7 +44,7 @@ class ConfigLoader:
     @staticmethod
     def get_config(env = "local"):
         if ConfigLoader._config is None:
-            ConfigLoader._config = ConfigLoader.load_config(env=env)
+            ConfigLoader._config = ConfigLoader.__load_config(env=env)
         return ConfigLoader._config
     
     @staticmethod

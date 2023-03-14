@@ -1,0 +1,11 @@
+{
+    "database": {
+        "host": "prod-db-host",
+        "username": "prod-db-user",
+        "password": "prod-db-password",
+        "props": {
+            "timeout": 10000,
+            "trans": 100
+        }
+    }
+}

@@ -5,4 +5,4 @@ __version__ = "0.0.1"
 __maintainer__ = "Ankur Mahajan"
 __email__ = "mahajanankur.nith@gmail.com"
 
-from pyconman.config_loader import ConfigLoader
+from pyconman.loader import ConfigLoader

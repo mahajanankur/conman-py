@@ -1,0 +1,11 @@
+{
+    "database": {
+        "host": "localhost",
+        "port": 5432,
+        "username": "dbuser",
+        "password": "dbpassword",
+        "database_name": "mydb"
+    },
+    "api_key": "1234567890",
+    "log_level": "debug"
+}
