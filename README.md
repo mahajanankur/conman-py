@@ -19,14 +19,15 @@ Pyconman is a useful package for managing JSON configurations in Python-based ap
 
 Pyconman requires [Python](https://www.python.org/) to run.
 
-To use pyconman, you can install it using pip by running the command.
-```sh
-$ pip install pyconman
-```
 Once installed, you can create a Python virtual environment by running the command in your project directory. This will create a virtual environment and activate it.
 ```sh
 python3 -m venv .venv && source .venv/bin/activate 
 ```
+To use pyconman, you can install it using pip by running the command.
+```sh
+$ pip install pyconman
+```
+
 ## Usage
 Next, create a folder called `configs` in your `project root directory`, and create a file called `default.json` in it. This file will contain the default configuration properties for your application. If you want to use a different environment, you can pass that environment's name in the `ENV` variable to override the specific properties for that environment. Please look in the example folder for further information.
 
